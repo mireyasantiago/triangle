@@ -1,0 +1,44 @@
+- var pageTitle = 'paginas'
+
+doctype
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    title #{pageTitle}
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css")
+    link(rel="stylesheet" href="../public/css/style.css")
+  body
+    block header
+    div.center
+      i.circle.fa.fa-twitter.fa-lg.redes(aria-hidden="true")
+      i.circle.fa.fa-facebook.fa-lg.redes(aria-hidden="true")
+      i.circle.fa.fa-google-plus.fa-lg.redes(aria-hidden="true")
+      i.circle.fa.fa-instagram.fa-lg.redes(aria-hidden="true")
+
+    div
+      ul#dropdown1.dropdown-content
+        li: a(href="#!") one
+        li: a(href="#!") two
+        li: a(href="#!") three
+      nav
+        div
+          img.brand-logo(src="../public/img/logo.png" )
+          ul.right
+            li: a(href="#!") HOME
+            li: a.dropdown-button(href="#!" data-activates="dropdown1") PAGES
+              i.material-icons.right arrow_drop_down
+            li: a.dropdown-button(href="#!" data-activates="dropdown1") BLOG
+              i.material-icons.right arrow_drop_down
+            li: a.dropdown-button(href="#!" data-activates="dropdown1") PORTFOLIO
+              i.material-icons.right arrow_drop_down
+            li: a(href="#!") $HORTCODES
+            li: div.input-field
+              input#search(type="search" required)
+              label.label-icon(for="search"): i.material-icons search
+              i.material-icons close
+
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js")
